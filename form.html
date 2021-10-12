@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Vérification de formulaire</title>
+    <script type="text/javascript" src="script.js">
+	</script>
+</head>
+
+<body onload = "form1.code.focus()">
+ <form name="form1">
+ <fieldset>
+ <legend> Vérification de formulaire</legend>
+    <label >Civilité</label><br/>
+    <input type="radio" name="civilite" value="Mademoiselle" id ="mlle"><label for="mlle">Mademoiselle</label>
+    <br/>
+    <input type="radio"  name="civilite" value="Madame" id ="mme"><label for="mme">Madame</label>
+    <br/>
+    <input type="radio" name="civilite" value="Monsieur" id ="mr"><label for="mr">Monsieur</label> <br />
+    <br/>
+    <input type="button" value="alert" onClick="testRB(form1.civilite);"><br/>
+    <br/>
+    <label for="nom">Nom</label> <input type="text" name="nom" id="nom" size="50" value ="Saisir votre nom" 
+onBlur="verifNom(nom)" onFocus="javascipt:select(this);"> (champs obligatoire) <br />
+
+    <br/>
+    <label for="code">Code postal</label> <input type="text" id="code" name="code" Size="6" 
+onFocus = "this.select()" > (4 chiffres) 
+<input type="button" value="check Code" onClick="verifCode(code);" ><br/>
+    <br/>
+ 
+    <label >Javascript est un langage</label>
+    <br/>
+    <input type="checkbox" name="langage" value="Objet" id="obj"><label for="obj">Objet</label>
+    <br/>
+    <input type="checkbox" name="langage" value="Type" id="type"><label for="type">Typé</label>
+    <br/>
+    <input type="checkbox" name="langage" value="Evenementiel" id="evnt"><label for="evnt">Evénementiel</label> <br />
+    <br/>
+    <input type="button" value="Verify" onClick="testCB(langage);">&nbsp;
+	<input type="button" value="Check All" onClick="checkAll(langage);">&nbsp;
+	<input type="button" value="Uncheck All" onClick="unCheckAll(langage);"><br/> &nbsp;
+    <br/>
+	<input type="reset" value=" Reset">
+    </fieldset>
+ </form>
+</body>
+</html>
